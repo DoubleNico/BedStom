@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+}
+
+group = 'me.doublenico'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+
+}
+
+dependencies {
+    implementation 'com.github.Minestom:Minestom:afddb6f549'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'me.doublenico.bedstom.BedStom',
+                "Multi-Release": true
+    }
+}
+
